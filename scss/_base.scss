@@ -1,0 +1,458 @@
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+// sass --watch scss\main.scss:dist\css\main.css
+//home page styles
+.home-page {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  position: relative;
+
+
+  //navbar styles
+  &__navbar {
+    @include bp-tablet {
+      height: 5rem;
+      padding: 1rem 2.5rem 0;
+    }
+
+    @include bp-desktop-sm {
+      padding: 0 5rem;
+    }
+
+    @include bp-desktop-md {
+      padding: 1rem 10vw 0;
+      height: 8rem;
+    }
+
+    @include bp-desktop-lg {
+      padding: 1rem 11vw 0;
+      height: 8.5rem;
+    }
+
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.2rem 0;
+    background: $primary-color;
+    position: relative;
+    z-index: 2;
+  }
+
+  //logo styles
+  &__logo-link {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-backface-visibility: hidden;
+  }
+
+  &__logo {
+    @include bp-tablet {
+      height: 2.3rem;
+    }
+
+    @include bp-desktop-sm {
+      height: 2.5rem;
+    }
+
+    @include bp-desktop-md {
+      height: 2.8rem;
+    }
+
+    @include bp-desktop-lg {
+      height: 2.9rem;
+    }
+
+    height: 1.8rem;
+    width: auto;
+  }
+
+  //styles for menu which appears in deksktops/above 768px
+  &__desktop-menu {
+    @include bp-desktop-sm {
+      display: flex;
+      flex-basis: 91%;
+      justify-content: flex-end;
+    }
+
+    display: none;
+
+    &-items {
+      @include bp-desktop-md {
+        font-size: 1.2rem;
+      }
+
+      @include bp-desktop-lg {
+        font-size: 1.3rem;
+      }
+
+      @extend h3;
+      font-size: 1.1rem;
+      color: $dark-font;
+      margin: 0 0 0 2vw;
+      -webkit-transition: .2s;
+      transition: .2s;
+      padding: 0.2rem .8rem;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+
+  //styels for mobile menu
+  &__mobile-menu {
+    @include bp-tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      padding: 0.8rem 0;
+    }
+
+    @include bp-desktop-sm {
+      display: none;
+    }
+
+    @include flex();
+    position: absolute;
+    top: -5rem;
+    width: 100%;
+    padding: 0.5rem 0;
+    -webkit-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+    background: $primary-color;
+    border-bottom: 1px solid rgba($secondary-color, .1);
+
+    &-items {
+      @include bp-tablet {
+        margin: 0;
+      }
+
+      @extend h3;
+      font-size: 1rem;
+      color: $dark-font;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-transition: .2s;
+      transition: .2s;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+
+  //home page main content tyles
+  &__main {
+    @include flex();
+    flex-grow: 1;
+    text-align: center;
+    padding: 0 .4rem;
+  }
+
+  //styles for fake border around the photograph
+  &__border {
+    @include bp-tablet {
+      width: 9.7rem;
+      height: 9.7rem;
+      border-top: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-bottom: 7px solid $secondary-color;
+      border-left: 7px solid $secondary-color;
+    }
+
+    @include bp-desktop-sm {
+      width: 10.2rem;
+      height: 10.2rem;
+      border-top: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-bottom: 7px solid $secondary-color;
+      border-left: 7px solid $secondary-color;
+    }
+
+    @include bp-desktop-md {
+      width: 12.2rem;
+      height: 12.2rem;
+      border-top: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid $secondary-color;
+      border-left: 8px solid $secondary-color;
+    }
+
+    @include bp-desktop-lg {
+      width: 14.7rem;
+      height: 14.7rem;
+      border-top: 9.5px solid transparent;
+      border-right: 9.5px solid transparent;
+      border-bottom: 9.5px solid $secondary-color;
+      border-left: 9.5px solid $secondary-color;
+    }
+
+    width: 8.2rem;
+    height: 8.2rem;
+    min-height: 8rem;
+    border-top: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid $secondary-color;
+    border-left: 5px solid $secondary-color;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-transform: rotatez(-45deg);
+    transform: rotatez(-45deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  //self image styles
+  &__tharindu-img {
+    @include bp-tablet {
+      height: 8.2rem;
+      width: 8.2rem;
+    }
+
+    @include bp-desktop-sm {
+      height: 8.8rem;
+      width: 8.8rem;
+    }
+
+    @include bp-desktop-md {
+      height: 10.7rem;
+      width: 10.7rem;
+    }
+
+    @include bp-desktop-lg {
+      height: 12.8rem;
+      width: 12.8rem;
+    }
+
+    background: url('../images/self.png') no-repeat center top;
+    background-size: cover;
+    height: 7.2rem;
+    width: 7.2rem;
+    border-radius: 50%;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+}
+
+//slide down mobile-menu when menu button is tapped using jquery
+.show-menu {
+  @include bp-tablet {
+    -webkit-transform: translateY(10rem);
+    transform: translateY(10rem);
+  }
+
+  -webkit-transform: translateY(9rem);
+  transform: translateY(9rem);
+}
+
+// .my-details section styles
+.my-details {
+  @include bp-tablet {
+    padding: 4.5rem 5.5rem 9rem;
+  }
+
+  @include bp-tablet-lg {
+    padding: 5rem 6.5rem 9rem;
+  }
+
+  @include bp-desktop-sm {
+    padding: 8rem 10rem 14rem;
+    -webkit-clip-path: polygon(0% 15%, 100% 0%, 100% 85%, 0 100%);
+    clip-path: polygon(0% 13%, 100% 0%, 100% 87%, 0% 100%);
+  }
+
+  @include bp-desktop-md {
+    padding: 9rem 13rem 15rem;
+  }
+
+  @include bp-desktop-lg {
+    padding: 10rem 18rem 16rem;
+  }
+
+  @include gradient-bg();
+  color: $primary-color;
+  padding: 4rem 2rem 6.5rem;
+  -webkit-clip-path: polygon(0% 6%, 100% 0%, 100% 94%, 0 100%);
+  clip-path: polygon(0% 6%, 100% 0%, 100% 94%, 0 100%);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  &__desc {
+    @include bp-tablet {
+      letter-spacing: .04rem;
+    }
+  }
+}
+
+// .overlay section styles
+.overlay {
+  @include bp-tablet {
+    width: 80%;
+    border-radius: .7rem;
+    top: -5.5rem;
+  }
+
+  @include bp-desktop-sm {
+    display: flex;
+    width: 95%;
+  }
+
+  @include bp-desktop-sm {
+    margin-top: -4rem;
+    width: 90%;
+  }
+
+  @include bp-desktop-md {
+    width: 80%;
+  }
+
+  height: auto;
+  width: 85%;
+  margin: 0 auto;
+  border: 1px solid rgba($secondary-color, .15);
+  border-radius: .6rem;
+  position: relative;
+  top: -4rem;
+  z-index: 1;
+  background: $primary-color;
+
+  &__f-e-dev {
+    @include bp-tablet {
+      padding: 2.8rem 2.5rem 1.6rem;
+    }
+
+    @include bp-desktop-sm {
+      padding: 2.8rem 1.5rem 1.6rem;
+      border: none;
+    }
+
+    @include bp-desktop-md {
+      padding: 3rem 2rem 1.6rem;
+    }
+
+    border-bottom: 1px solid rgba($secondary-color, .15);
+    width: 100%;
+    padding: 2rem 1.5rem 1rem;
+  }
+
+  &__resume {
+    @extend .overlay__f-e-dev;
+
+    @include bp-desktop-sm {
+      border-left: 1px solid rgba($secondary-color, .15);
+      border-right: 1px solid rgba($secondary-color, .15);
+    }
+  }
+
+  &__contact {
+    @extend .overlay__f-e-dev;
+    border: none;
+  }
+}
+
+//footer styles
+.footer {
+  @include bp-tablet {
+    padding: 7.5rem 2rem 1rem;
+    margin-top: -10.2rem;
+  }
+
+  @include bp-desktop-sm {
+    padding: 8rem 2rem 1rem;
+  }
+
+  @include bp-desktop-sm {
+    margin-top: -13.1rem;
+    padding: 12rem 2rem 3rem;
+    -webkit-clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+  @include gradient-bg();
+  height: auto;
+  width: 100vw;
+  max-width: 100%;
+  padding: 5.3rem 2rem 1rem;
+  margin-top: -7.5rem;
+  text-align: center;
+  -webkit-clip-path: polygon(0% 6%, 100% 0%, 100% 94%, 0 100%);
+  clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0 100%);
+  color: $primary-color;
+
+  &__logo-link {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  &__logo {
+    @include bp-tablet {
+      margin-bottom: 1.7rem;
+    }
+
+    @include bp-desktop-sm {
+      margin-bottom: 2rem;
+    }
+
+    @extend .home-page__logo;
+    margin-bottom: 1.5rem;
+  }
+
+  &__heading {
+    @include bp-tablet {
+      margin-bottom: 1.7rem;
+    }
+
+    @include bp-desktop-sm {
+      font-size: 1.3rem;
+    }
+
+    color: $primary-color;
+    margin-bottom: 1.5rem;
+  }
+
+  &__fb-link {
+    color: darken($primary-color, 25%);
+    text-decoration-line: underline;
+  }
+}
+
+//----------//
+//set opacity to 0
+.slide-to-left {
+  opacity: 0;
+}
+
+//fade in when scrolling down
+.slide-into-view {
+  animation: slide-in .5s linear forwards;
+}
+
+//animate the event
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: .5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+//----------//

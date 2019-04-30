@@ -1,0 +1,54 @@
+//flex-box mixin
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+//gradient-background mixin
+@mixin gradient-bg {
+  background: linear-gradient(to top, lighten($secondary-color, 1%), darken($secondary-color, 8%));
+}
+
+//button-borders
+@mixin border {
+  border: 1px solid $secondary-color;
+  border-radius: 5rem;
+}
+
+//media queries
+// $tab: 550px;
+// $tab-lg: 850px;
+// $desktop-sm: 1024px;
+//desktop-md: 1367px;
+// desktop-lg: 1700px;
+@mixin bp-tablet {//550px-849px
+  @media screen and (min-width: $tab) {
+    @content;
+  }
+}
+
+@mixin bp-tablet-lg {//850px-1023px
+  @media screen and (min-width: $tab-lg) {
+    @content;
+  }
+}
+
+@mixin bp-desktop-sm {//1024px-1366px
+  @media screen and (min-width: $desktop-sm) {
+    @content;
+  }
+}
+
+@mixin bp-desktop-md {//1367px-1699px
+  @media screen and (min-width: $desktop-md) {
+    @content;
+  }
+}
+
+@mixin bp-desktop-lg {//1700px and up
+  @media screen and (min-width: $desktop-lg) {
+    @content;
+  }
+}
