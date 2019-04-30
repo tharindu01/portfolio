@@ -1,0 +1,129 @@
+//----------------------------//
+//menu-btn/hamburger icon
+// .home-page__menu-btn {
+//   @include bp-desktop-sm {
+//     display: none;
+//   }
+
+//   @include flex();
+//   justify-content: space-evenly;
+//   height: 1.2rem;
+//   width: 1.6rem;
+//   cursor: pointer;
+//   -webkit-tap-highlight-color: transparent;
+// }
+
+//menu-btn lines
+// .home-page__btn-lines {
+//   height: .1rem;
+//   width: 100%;
+//   background: $secondary-color;
+//   -webkit-transition: .2s;
+//   transition: .2s;
+// }
+
+//animate the menu-btn lines to form a 'x'
+.animate {
+  .home-page__btn-lines {
+    &:nth-child(1) {
+      -webkit-transform: translateY(5px) rotate(45deg);
+      transform: translateY(5px) rotate(45deg);
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+    }
+
+    &:nth-child(3) {
+      -webkit-transform: translateY(-5px) rotate(-45deg);
+      transform: translateY(-5px) rotate(-45deg);
+    }
+  }
+}
+//------------------------------//
+
+
+//highlight contact me btn(call to action) in mobile and desktop menus
+.home-page__highlight-item {
+
+  @include bp-tablet {
+    border-radius: 1.5rem;
+  }
+
+  @include bp-desktop-sm {
+    border: 2px solid $secondary-color;
+  }
+
+  @include border;
+  color: $secondary-color !important;
+  padding: .3rem .9rem .2rem;
+
+  &:hover {
+    background: $secondary-color;
+    color: $primary-color !important;
+  }
+}
+//---------------------------------//
+
+
+//.overlay__link buttons
+.overlay__link {
+  @include bp-tablet {
+    width: 35%;
+    margin: 0 auto 1.5rem;
+  }
+
+  @include bp-desktop-sm {
+    font-family: $font-medium;
+    font-size: 1rem;
+    width: 50%;
+  }
+
+  @include bp-desktop-sm {
+    width: 40%;
+  }
+
+  @include border();
+  display: block;
+  color: $secondary-color;
+  padding: .3rem .5rem;
+  width: 45%;
+  margin: 0 auto 1.2rem;
+  -webkit-transition: .2s;
+  transition: .2s;
+  -webkit-tap-highlight-color: transparent;
+
+  &:hover {
+    color: white;
+    background: $secondary-color;
+  }
+
+  &--mb {
+    @include bp-tablet {
+      margin-bottom: .7rem;
+    }
+
+    @include bp-desktop-sm {
+      margin-bottom: .8rem;
+    }
+
+    margin-bottom: .5rem;
+  }
+}
+//---------------------//
+
+
+//icons styles for icons in '.overlay' section
+.overlay__icon {
+  @include bp-tablet {
+    width: 3.2rem;
+    height: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  width: 2.4rem;
+  height: 2rem;
+  display: inline-block;
+  margin-bottom: 1.2rem;
+}
+//-------------------------//
