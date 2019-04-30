@@ -32,7 +32,7 @@ ruby, section, summary, time, mark, audio, video {
   font-family: 'raleway-black';
   font-style: normal;
   font-display: swap;
-  src: local("ralewayw"), url("./fonts/raleway-black.woff2") format("woff2"), url("../fonts/raleway-black.woff") format("woff"), url("../fonts/raleway-black.ttf") format("truetype"), url("../fonts/raleway-black.eot") format("embedded-opentype"); }
+  src: local("ralewayw"), url("../fonts/raleway-black.woff2") format("woff2"), url("../fonts/raleway-black.woff") format("woff"), url("../fonts/raleway-black.ttf") format("truetype"), url("../fonts/raleway-black.eot") format("embedded-opentype"); }
 body {
   font-family: "raleway-regular";
   font-size: 1.05rem;
