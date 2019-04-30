@@ -1,26 +1,26 @@
 //----------------------------//
 //menu-btn/hamburger icon
-.home-page__menu-btn {
-  @include bp-desktop-sm {
-    display: none;
-  }
+// .home-page__menu-btn {
+//   @include bp-desktop-sm {
+//     display: none;
+//   }
 
-  @include flex();
-  justify-content: space-evenly;
-  height: 1.2rem;
-  width: 1.6rem;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-}
+//   @include flex();
+//   justify-content: space-evenly;
+//   height: 1.2rem;
+//   width: 1.6rem;
+//   cursor: pointer;
+//   -webkit-tap-highlight-color: transparent;
+// }
 
 //menu-btn lines
-.home-page__btn-lines {
-  height: .1rem;
-  width: 100%;
-  background: $secondary-color;
-  -webkit-transition: .2s;
-  transition: .2s;
-}
+// .home-page__btn-lines {
+//   height: .1rem;
+//   width: 100%;
+//   background: $secondary-color;
+//   -webkit-transition: .2s;
+//   transition: .2s;
+// }
 
 //animate the menu-btn lines to form a 'x'
 .animate {
